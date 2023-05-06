@@ -19,7 +19,7 @@
     "require": {
         "php": "~7.2|^8.0",
         "ext-json": "*",
-        "symfony/process": "~3|~4|~5",
+        "symfony/process": "~3|~4|~5|^6",
         "jeremeamia/superclosure": "~2",
         "lstrojny/hmmmath": ">=0.5.0",
         "guzzlehttp/guzzle": "^6.5",
