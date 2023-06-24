@@ -3,10 +3,17 @@
 namespace InterNations\Component\HttpMock;
 
 use GuzzleHttp\Psr7\Message;
+use Psr\Http\Message\ResponseInterface as Response;
 use UnexpectedValueException;
 
 final class Util
 {
+    public static function writeToResponse(Response $response, string $write): Response
+    {
+        $response->getBody()->write($write);
+        return $response;
+    }
+
     public static function deserialize($string)
     {
         $result = static::silentDeserialize($string);
