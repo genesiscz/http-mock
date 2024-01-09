@@ -104,7 +104,7 @@ class Server extends Process
 
     private function pollWait()
     {
-        foreach (FibonacciFactory::sequence(50000, 10000) as $sleepTime) {
+        foreach (range(50000, 50_000 * 10, 500) as $sleepTime) {
             try {
                 usleep($sleepTime);
                 $this->getClient()->head('/_me');
